@@ -1,0 +1,70 @@
+{
+  "status": "Phase 7 通过，可进入 Phase 8",
+  "accepted": true,
+  "finished": "2026-11-21T19:09:34+08:00",
+  "eligible_users": 214,
+  "skipped_users": 42,
+  "teacher_gpu_hours": 1.0558406812614864,
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "window_replay": 428,
+  "verified_prompts": 1712,
+  "raw_attempts": 1712,
+  "decisions": 1712,
+  "usable_demos": 505,
+  "retained_unique_users": 124,
+  "student_token_range": [
+    1037,
+    2375
+  ],
+  "lora_path_verified": true,
+  "role_statistics": [
+    {
+      "role": "skill",
+      "logical": "428",
+      "retries": "0",
+      "valid": "428",
+      "invalid": "0",
+      "wrong_first": "304",
+      "retained": "124",
+      "attempted_users": "214",
+      "retained_users": "101",
+      "retention_rate": "0.2897196261682243"
+    },
+    {
+      "role": "trajectory",
+      "logical": "428",
+      "retries": "0",
+      "valid": "428",
+      "invalid": "0",
+      "wrong_first": "297",
+      "retained": "131",
+      "attempted_users": "214",
+      "retained_users": "105",
+      "retention_rate": "0.3060747663551402"
+    },
+    {
+      "role": "preference",
+      "logical": "428",
+      "retries": "0",
+      "valid": "428",
+      "invalid": "0",
+      "wrong_first": "301",
+      "retained": "127",
+      "attempted_users": "214",
+      "retained_users": "97",
+      "retention_rate": "0.2967289719626168"
+    },
+    {
+      "role": "employer",
+      "logical": "428",
+      "retries": "0",
+      "valid": "428",
+      "invalid": "0",
+      "wrong_first": "305",
+      "retained": "123",
+      "attempted_users": "214",
+      "retained_users": "103",
+      "retention_rate": "0.28738317757009346"
+    }
+  ]
+}

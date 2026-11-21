@@ -1,0 +1,7 @@
+{
+  "torch": "2.14.0+cu130",
+  "cuda": "13.0",
+  "transformers": "4.57.6",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "seconds": 10.445534601807594
+}

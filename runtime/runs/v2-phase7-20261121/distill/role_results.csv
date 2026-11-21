@@ -1,0 +1,5 @@
+role,logical,retries,valid,invalid,wrong_first,retained,attempted_users,retained_users,retention_rate
+skill,428,0,428,0,304,124,214,101,0.2897196261682243
+trajectory,428,0,428,0,297,131,214,105,0.3060747663551402
+preference,428,0,428,0,301,127,214,97,0.2967289719626168
+employer,428,0,428,0,305,123,214,103,0.28738317757009346

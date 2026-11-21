@@ -1,0 +1,94 @@
+{
+  "seed": 20261121,
+  "model": "model/Qwen3-32B-AWQ/0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "teacher_files": {
+    ".gitattributes": {
+      "size": 1570,
+      "upstream_digest": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+    },
+    "LICENSE": {
+      "size": 11544,
+      "upstream_digest": "6f9739bb281a3d2ade8fb5f6dd6dde597a739c80"
+    },
+    "README.md": {
+      "size": 16885,
+      "upstream_digest": "bb018dd8b44ed5ce9923abc8c83ee86fd15e2439"
+    },
+    "config.json": {
+      "size": 907,
+      "upstream_digest": "a902ddd5260f71ec1618a75f669cd5430d3051a6"
+    },
+    "generation_config.json": {
+      "size": 239,
+      "upstream_digest": "20a8a9156fc8c3f25295ca067f61fdf120d517c5"
+    },
+    "merges.txt": {
+      "size": 1671853,
+      "upstream_digest": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    "model-00001-of-00004.safetensors": {
+      "size": 4966384688,
+      "upstream_digest": "ab7988215e3b087c884e0c14ce1994a64aac31dc9a37a4bcf29f5b45f3506e2e"
+    },
+    "model-00002-of-00004.safetensors": {
+      "size": 4998723112,
+      "upstream_digest": "46faff349f1dd18ffe76993edd3d9fd32941d042331dc590525409bbe3d37edf"
+    },
+    "model-00003-of-00004.safetensors": {
+      "size": 4949671152,
+      "upstream_digest": "6e9f763d8c31ad19f1cd67b0b599a38edffd76a4465a22ff5f7fcac46d820e63"
+    },
+    "model-00004-of-00004.safetensors": {
+      "size": 4410702792,
+      "upstream_digest": "87f180889fead12b00b1bdf4dca3a3a14e4510e1e200bf56e31898e120b993d8"
+    },
+    "model.safetensors.index.json": {
+      "size": 131598,
+      "upstream_digest": "72d43247f527688bcb4ee0c29374d806a414fa6b"
+    },
+    "tokenizer.json": {
+      "size": 11422654,
+      "upstream_digest": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "tokenizer_config.json": {
+      "size": 9732,
+      "upstream_digest": "417d038a63fa3de29cfde265caedae14d1a58d92"
+    },
+    "vocab.json": {
+      "size": 2776833,
+      "upstream_digest": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    }
+  },
+  "roles": [
+    "skill",
+    "trajectory",
+    "preference",
+    "employer"
+  ],
+  "train": 256,
+  "skipped": 42,
+  "windows": 428,
+  "logical_requests": 1712,
+  "batch_size": 2,
+  "enable_thinking": false,
+  "do_sample": false,
+  "input_cap": 3840,
+  "output_cap": 256,
+  "profile_cap": 512,
+  "job_cap": 640,
+  "source_hashes": {
+    "data/splits.json": "0cab3b846ca7a051c5c7a4d4a3ba744ae9589811222e68afb74f6b14052243df",
+    "data/lists.jsonl": "91d481e816bb3a0fe903761880837c72b9644600f3abbcf9a1788432596512e8",
+    "data/inputs.jsonl": "d57df513b5bb752ef15f5f5bf14349e6e1e90a18116b1e84e7d0fffae348d064",
+    "labels/train.jsonl": "ce2a9e496fff3317a30c91fbdb53eb2152849d1556fa35e6ff8d0594a726d6e6"
+  },
+  "runtime_sources": {
+    "runtime/runs/v2-phase4-20261121/code/phase4_agent_reviews.py": "2d2c06fa10f62ae90e6ee309c5b4907feb6a221f1da4d250486f65b5fea280ee",
+    "runtime/runs/v2-phase4-20261121/code/phase3_probe.py": "313e91be3148a002745a2154ce454e00a420d60c29947cc009fa1733d9954d8c",
+    "code/phase3_awq.py": "7e3be7835cd72b4c7395d764b5085de261650b9884d676c354a16204954b3f05",
+    "runtime/runs/v2-phase3-20261121/pilot/vendor/autoawq-0.2.9/awq/modules/triton/gemm.py": "65de0aec9fde1c1e6546fad0de47cf85b104f7f3d88199fe1c5bc5cbca6a3fae"
+  },
+  "blind_sha256": "88231c6a750ddb3c26e1bcde37d31182b5daef2100d5c3061112d7cdb47845cc",
+  "windows_sha256": "8a7441029ad38e0d966cacf239bb20e7faa1460be85a1d2608e12e715ec78c39"
+}

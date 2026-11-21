@@ -1,0 +1,3 @@
+stage,start_epoch,end_epoch,gpu_hours,basis
+teacher,1795255535.9749224,1795259337.001375,1.0558406812614864,complete GPU job including import/load/generation/save/exit
+prepare/filter/verify,,,0,CPU only

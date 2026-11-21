@@ -1,0 +1,13 @@
+{
+  "pid": 143838,
+  "started_epoch": 1795255445.0097363,
+  "revision": "p7v1",
+  "command": [
+    "/data/user/swu073/iota6910l/project/runtime/envs/v2/bin/python",
+    "-u",
+    "runtime/runs/v2-phase7-20261121/code/prepare.py"
+  ],
+  "state": "done",
+  "exit_code": 0,
+  "ended_epoch": 1795255528.637028
+}

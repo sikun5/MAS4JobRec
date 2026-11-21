@@ -1,0 +1,2 @@
+name, memory.total [MiB], memory.free [MiB], utilization.gpu [%]
+NVIDIA H100 80GB HBM3, 81559 MiB, 81072 MiB, 0 %
