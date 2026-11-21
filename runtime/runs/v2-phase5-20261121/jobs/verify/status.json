@@ -1,0 +1,22 @@
+{
+  "pid": 126473,
+  "started_epoch": 1795249211.9415991,
+  "revision": "v1",
+  "command": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=",
+    "OPENBLAS_NUM_THREADS=1",
+    "OMP_NUM_THREADS=1",
+    "MKL_NUM_THREADS=1",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "PYTHONPATH=/data/user/swu073/iota6910l/project/runtime/runs/v2-phase3-20261121/pilot/vendor/cpu",
+    "MPLBACKEND=Agg",
+    "MPLCONFIGDIR=/data/user/swu073/iota6910l/project/runtime/runs/v2-phase5-20261121/evidence/mpl-cache",
+    "runtime/envs/v2/bin/python",
+    "-Bu",
+    "runtime/runs/v2-phase5-20261121/code/phase5_verify.py"
+  ],
+  "state": "done",
+  "exit_code": 0,
+  "ended_epoch": 1795249215.1287305
+}

@@ -1,0 +1,14 @@
+{
+  "stage": "formal",
+  "opened_upstream_data_files": {
+    "runtime/runs/v2-phase2-20261121/data/lists.jsonl": 2,
+    "runtime/runs/v2-phase2-20261121/data/splits.json": 2,
+    "runtime/runs/v2-phase2-20261121/labels/C.jsonl": 2,
+    "runtime/runs/v2-phase2-20261121/phase2.sha256": 1,
+    "runtime/runs/v2-phase4-20261121/acceptance.json": 1,
+    "runtime/runs/v2-phase4-20261121/base/reviews.jsonl": 2,
+    "runtime/runs/v2-phase4-20261121/phase4.sha256": 1
+  },
+  "denied": [],
+  "test_label_opens": 0
+}

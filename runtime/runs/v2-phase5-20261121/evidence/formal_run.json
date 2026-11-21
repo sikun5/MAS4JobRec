@@ -1,0 +1,19 @@
+{
+  "input_sha256": {
+    "runtime/runs/v2-phase2-20261121/data/splits.json": "0cab3b846ca7a051c5c7a4d4a3ba744ae9589811222e68afb74f6b14052243df",
+    "runtime/runs/v2-phase2-20261121/data/lists.jsonl": "91d481e816bb3a0fe903761880837c72b9644600f3abbcf9a1788432596512e8",
+    "runtime/runs/v2-phase2-20261121/labels/C.jsonl": "a4c50442e3a82f86bbfb73077e9815e90cfb9f4468c8c3c0a05f56a1a42f05e7",
+    "runtime/runs/v2-phase4-20261121/base/reviews.jsonl": "57627a025b93e9652d9831edb1a471a032bd47eb2e789ef505dd8ef40178d883",
+    "runtime/runs/v2-phase4-20261121/acceptance.json": "c4de3bfac4d6ee68b74cdc29a497ab481b3b17909cf8fbd181eab6c9547ad56e"
+  },
+  "n_users_C": 128,
+  "n_users_T": 256,
+  "n_rankings": 2560,
+  "fallback_count": 0,
+  "python": "3.10.13",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "gpu_hours": 0,
+  "elapsed_s": 0.7299851812422276,
+  "seal_epoch": 1795248852.5224857
+}

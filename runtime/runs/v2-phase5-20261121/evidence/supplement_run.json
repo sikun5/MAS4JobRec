@@ -1,0 +1,43 @@
+{
+  "seed": 20261121,
+  "repetitions": 2000,
+  "fold_sizes": [
+    43,
+    43,
+    42
+  ],
+  "pair_order": [
+    [
+      "skill",
+      "trajectory"
+    ],
+    [
+      "skill",
+      "preference"
+    ],
+    [
+      "skill",
+      "employer"
+    ],
+    [
+      "trajectory",
+      "preference"
+    ],
+    [
+      "trajectory",
+      "employer"
+    ],
+    [
+      "preference",
+      "employer"
+    ]
+  ],
+  "stat_order": [
+    "rho0",
+    "rho1",
+    "rho"
+  ],
+  "point_estimates_equal": true,
+  "unchanged_formal_files": 5,
+  "elapsed_s": 12.377732383087277
+}

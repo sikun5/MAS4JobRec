@@ -1,0 +1,14 @@
+{
+  "host": "hkust-gz-hpc3-temp2",
+  "run": "v2-phase5-20261121",
+  "repository_head": "938bdc63112ba7a28c75826c35defabb9cdc6945",
+  "device": "CPU",
+  "gpu_compute_hours": 0,
+  "job_elapsed_s": {
+    "formal": 2.8195743560791016,
+    "supplement": 12.884447813034058,
+    "verify": 3.187131404876709
+  },
+  "verified_protocol_sha256": "1208bc07c89c3c90835168011feccc7a2a9192a6a59bc7f4e5f39e730fbdde21",
+  "heatmap_visually_checked": true
+}
