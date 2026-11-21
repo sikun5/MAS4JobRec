@@ -1,0 +1,52 @@
+{
+  "run_id": "v2-phase1-20261121",
+  "project": "/data/user/swu073/iota6910l/project",
+  "paths": {
+    "code": "/data/user/swu073/iota6910l/project/code",
+    "data": "/data/user/swu073/iota6910l/project/data",
+    "global_guide": "/data/user/swu073/iota6910l/project/global_guide",
+    "runtime": "/data/user/swu073/iota6910l/project/runtime",
+    "model": "/data/user/swu073/iota6910l/project/model"
+  },
+  "writable_test": [
+    "/data/user/swu073/iota6910l/project/code",
+    "/data/user/swu073/iota6910l/project/data",
+    "/data/user/swu073/iota6910l/project/runtime/runs/v2-phase1-20261121"
+  ],
+  "interpreter": "/data/user/swu073/iota6910l/project/runtime/envs/v2/bin/python",
+  "python": "3.10.13",
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "accelerate": "1.0.1"
+  },
+  "backend": "Transformers batched generate",
+  "cuda_runtime": "13.0",
+  "device": "NVIDIA H100 80GB HBM3",
+  "vram_bytes": 85009367040,
+  "driver": "610.43.02",
+  "model": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "snapshot": "/data/user/swu073/iota6910l/project/model/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218",
+  "file_count": 15,
+  "verified_shards": [
+    "model-00001-of-00005.safetensors",
+    "model-00002-of-00005.safetensors",
+    "model-00003-of-00005.safetensors",
+    "model-00004-of-00005.safetensors",
+    "model-00005-of-00005.safetensors"
+  ],
+  "tensor_index_keys": 399,
+  "offline_config": "qwen3",
+  "tokenizer": "Qwen2TokenizerFast",
+  "chat_template_test_tokens": 14,
+  "env_rebuild": "env/rebuild.md, env/conda-explicit.txt, env/pip-freeze.txt",
+  "stage_launcher": "code/launch_stage.py",
+  "teacher_32b": "Optional, not downloaded",
+  "pilot": "not started",
+  "completed_utc": "2026-11-20T19:50:29.114302+00:00",
+  "filesystem_free_bytes": 11423956649529344,
+  "user_quota_command": null
+}

@@ -1,0 +1,14 @@
+{
+  "verified_shards": 4,
+  "pilot_user_pool": 16,
+  "retained_demos": 4,
+  "supplemental_retained": 9,
+  "matched_training_sequences": true,
+  "retained_per_role": {
+    "skill": 1,
+    "trajectory": 1,
+    "preference": 1,
+    "employer": 1
+  },
+  "three_routes_verified": true
+}

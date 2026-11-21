@@ -1,0 +1,3 @@
+stage,start_utc,end_utc,gpu_hours,basis
+phase1,2026-11-20T18:39:02+00:00,2026-11-20T19:50:29.114302+00:00,1.190865,conservative development-instance preparation interval; billing unverified
+pilot,,,0,not started

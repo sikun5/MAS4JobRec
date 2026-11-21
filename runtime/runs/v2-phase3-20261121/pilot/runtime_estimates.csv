@@ -1,0 +1,4 @@
+route,status,wall_low_h,wall_center_h,wall_high_h,gpu_low_h,gpu_center_h,gpu_high_h
+main,measured rates,4.31129,5.0189,6.43453,4.31118,5.01879,6.43442
+main+SFT,measured rates; one shared pass,9.53078,11.48399,13.48686,9.53062,11.48383,13.4867
+main+SFT+LoRA,measured rates; one shared pass,11.45434,13.5324,15.70093,11.45419,13.53224,15.70077

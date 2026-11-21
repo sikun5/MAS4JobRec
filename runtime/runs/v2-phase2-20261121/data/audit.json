@@ -1,0 +1,55 @@
+{
+  "actions": 700938,
+  "bm25_mean_doc_tokens": 238.70501200224092,
+  "eligible_users": 3392,
+  "jd_quarantine": [
+    {
+      "fields": 20,
+      "jd_no": "a18be2299b635e9ae8bd0fc404e67a07",
+      "line": 175426
+    }
+  ],
+  "jd_raw": 269534,
+  "jd_valid": 269533,
+  "job_overlap_counts": {
+    "reduced": {
+      "C/T": 14,
+      "C/train": 22,
+      "T/train": 46,
+      "pilot/C": 4,
+      "pilot/T": 4,
+      "pilot/train": 4
+    },
+    "standard": {
+      "C/T": 51,
+      "C/train": 45,
+      "T/train": 75,
+      "pilot/C": 7,
+      "pilot/T": 12,
+      "pilot/train": 4
+    }
+  },
+  "joined_rows": 648171,
+  "merged_pairs": 473032,
+  "merged_states": {
+    "000": 343276,
+    "010": 1,
+    "100": 68463,
+    "110": 32698,
+    "111": 28594
+  },
+  "resume_groups": 3388,
+  "sampled_users": 656,
+  "source_sha256": {
+    "table1_user.txt": "735ee2736d746f272dd4c0364af117c20802e5d05df5adf4aa4e406fb04262d9",
+    "table2_jd.txt": "b1a05ddce12a7b14110fc48b4fbbe01489190a2e11ca768c21cac3359cba0ced",
+    "table3_action.txt": "13c4759028726b8b29340ef3b1daf10267d32d8600494fdfea29e0808691316c"
+  },
+  "touched_pairs": 129756,
+  "unmatched_rows": 52767,
+  "user_row_shapes": {
+    "12": 35,
+    "13": 4465
+  },
+  "users": 4500
+}

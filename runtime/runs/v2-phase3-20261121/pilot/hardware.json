@@ -1,0 +1,252 @@
+{
+  "seconds_cpu_proxy": {
+    "main": [
+      0.37589235231280327,
+      0.37906233686953783,
+      0.389873253647238
+    ],
+    "student": [
+      0.19625469483435154,
+      0.19997777976095676,
+      0.20491631794720888
+    ]
+  },
+  "samples": {
+    "base": {
+      "events": 24,
+      "complete": true,
+      "peak_allocated_GiB": 16.428,
+      "peak_reserved_GiB": 17.414,
+      "logical": 40,
+      "valid": 40,
+      "retries": 0,
+      "errors": [],
+      "load_peak_allocated_GiB": 15.258,
+      "load_seconds": 7.4764,
+      "warmup_peak_allocated_GiB": 15.654,
+      "warmup_seconds": 11.3797,
+      "inference_peak_allocated_GiB": 16.428,
+      "inference_seconds": 50.4852,
+      "four_windows_per_hour": [
+        2049.28,
+        2662.57,
+        3123.11
+      ],
+      "general_windows_per_hour": [
+        4771.9,
+        5188.67,
+        5570.54
+      ]
+    },
+    "teacher": {
+      "events": 21,
+      "complete": true,
+      "peak_allocated_GiB": 20.074,
+      "peak_reserved_GiB": 20.65,
+      "logical": 32,
+      "valid": 32,
+      "retries": 0,
+      "errors": [],
+      "load_peak_allocated_GiB": 19.54,
+      "load_seconds": 10.1289,
+      "warmup_peak_allocated_GiB": 19.54,
+      "warmup_seconds": 16.7065,
+      "inference_peak_allocated_GiB": 20.074,
+      "inference_seconds": 93.836,
+      "stress_peak_allocated_GiB": 19.737,
+      "stress_seconds": 25.85,
+      "four_windows_per_hour": [
+        1113.88,
+        1207.1,
+        1421.32
+      ]
+    },
+    "full": {
+      "events": 31,
+      "complete": true,
+      "peak_allocated_GiB": 63.426,
+      "peak_reserved_GiB": 76.174,
+      "logical": 32,
+      "valid": 32,
+      "retries": 0,
+      "errors": [],
+      "load_peak_allocated_GiB": 15.258,
+      "load_seconds": 3.52,
+      "warmup_peak_allocated_GiB": 63.416,
+      "warmup_seconds": 3.137,
+      "inference_peak_allocated_GiB": 16.457,
+      "inference_seconds": 42.6218,
+      "train_step_peak_allocated_GiB": 63.426,
+      "train_step_seconds": 5.8085,
+      "save_peak_allocated_GiB": 63.416,
+      "save_seconds": 5.8887,
+      "stress_peak_allocated_GiB": 16.231,
+      "stress_seconds": 14.449,
+      "update_steps": 8,
+      "trainable_parameters": 8190735360,
+      "optimizer_state_dtype": "torch.bfloat16",
+      "max_observed_parameter_delta": 0.0001220703125,
+      "step_seconds_min_med_max": [
+        0.4610915342345834,
+        0.6341887584421784,
+        1.5328397289849818
+      ],
+      "four_windows_per_hour": [
+        2420.46,
+        2617.04,
+        3305.19
+      ]
+    },
+    "lora": {
+      "events": 31,
+      "complete": true,
+      "peak_allocated_GiB": 20.644,
+      "peak_reserved_GiB": 39.494,
+      "logical": 32,
+      "valid": 32,
+      "retries": 0,
+      "errors": [],
+      "load_peak_allocated_GiB": 15.258,
+      "load_seconds": 4.0197,
+      "warmup_peak_allocated_GiB": 20.644,
+      "warmup_seconds": 3.0508,
+      "inference_peak_allocated_GiB": 17.02,
+      "inference_seconds": 60.8474,
+      "train_step_peak_allocated_GiB": 20.644,
+      "train_step_seconds": 13.5518,
+      "save_peak_allocated_GiB": 20.644,
+      "save_seconds": 0.3429,
+      "stress_peak_allocated_GiB": 16.719,
+      "stress_seconds": 19.8111,
+      "update_steps": 8,
+      "trainable_parameters": 43646976,
+      "optimizer_state_dtype": "torch.float32",
+      "max_observed_parameter_delta": 9.999929898185655e-05,
+      "step_seconds_min_med_max": [
+        0.6794243021868169,
+        1.862973794573918,
+        3.7780473181046546
+      ],
+      "four_windows_per_hour": [
+        1729.71,
+        1853.57,
+        2194.77
+      ]
+    }
+  },
+  "gpu_seconds": {
+    "main_setup": [
+      32.380089885089546,
+      32.380089885089546,
+      32.380089885089546
+    ],
+    "main": [
+      15520.26553667197,
+      18067.660714393947,
+      23163.919478303287
+    ],
+    "teacher_setup": [
+      81.19447104819119,
+      81.19447104819119,
+      81.19447104819119
+    ],
+    "full_training": [
+      118.03943276405334,
+      162.35232216119766,
+      392.40697062015533
+    ],
+    "full_student_recheck": [
+      13384.059306621552,
+      16903.402926921844,
+      18276.194259881973
+    ],
+    "full_setup": [
+      19.355179470498115,
+      19.355179470498115,
+      19.355179470498115
+    ],
+    "teacher": [
+      5268.500397967175,
+      6189.031369255856,
+      6700.234291242436
+    ],
+    "lora_training": [
+      173.93262135982513,
+      476.921291410923,
+      967.1801134347916
+    ],
+    "lora_student_recheck": [
+      20155.580750226974,
+      23865.67557477951,
+      25574.64046883583
+    ],
+    "lora_setup": [
+      116.787285850849,
+      116.787285850849,
+      116.787285850849
+    ]
+  },
+  "data_cache": "Phase 2 accepted lists already available",
+  "workload": {
+    "calibration_users": 128,
+    "test_users": 256,
+    "main_role_windows": 12288,
+    "main_general_windows": 2048,
+    "student_role_windows": 12288,
+    "epochs": 1
+  },
+  "units": {
+    "memory": "GiB, torch allocator",
+    "range": "observed speed envelope at fixed planned volume"
+  },
+  "retention_sensitivity": {
+    "full": [
+      {
+        "retention": 0.125,
+        "training_examples": 256,
+        "wall_hours_at_median_speed": 11.48399
+      },
+      {
+        "retention": 0.25,
+        "training_examples": 512,
+        "wall_hours_at_median_speed": 11.52909
+      },
+      {
+        "retention": 0.5,
+        "training_examples": 1024,
+        "wall_hours_at_median_speed": 11.61929
+      },
+      {
+        "retention": 1.0,
+        "training_examples": 2048,
+        "wall_hours_at_median_speed": 11.79968
+      }
+    ],
+    "lora": [
+      {
+        "retention": 0.125,
+        "training_examples": 256,
+        "wall_hours_at_median_speed": 13.5324
+      },
+      {
+        "retention": 0.25,
+        "training_examples": 512,
+        "wall_hours_at_median_speed": 13.66488
+      },
+      {
+        "retention": 0.5,
+        "training_examples": 1024,
+        "wall_hours_at_median_speed": 13.92984
+      },
+      {
+        "retention": 1.0,
+        "training_examples": 2048,
+        "wall_hours_at_median_speed": 14.45975
+      }
+    ]
+  },
+  "teacher_windows_planned": 2048,
+  "pilot_teacher_demonstrations": 4,
+  "pilot_retention": 0.125,
+  "planned_examples": 256
+}
