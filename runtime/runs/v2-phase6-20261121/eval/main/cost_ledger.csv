@@ -1,0 +1,9 @@
+stage,scope,first_windows,retries,gpu_hours,cpu_wall_seconds,basis,source
+Phase 1,准备估计,,,1.190865,,开发实例占用上界估记，平台计费未核实,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase1-20261121/gpu_hours.csv
+Phase 3,pilot,184,0,0.2197957,,独立探测作业（含中断），不计入主线,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase3-20261121/gpu_hours.csv
+C_four,主线,4096,0,1.0064728965175649,,批次生成耗时,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase4-20261121/acceptance.json
+T_four,主线,8192,0,1.9231267499067406,,批次生成耗时,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase4-20261121/acceptance.json
+T_B1,主线,2048,0,0.38711310469312593,,批次生成耗时,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase4-20261121/acceptance.json
+Phase 4 其他占卡,主线,,,0.07647029387247217,,作业占卡总量减批次生成；含装载、准备、写盘及退出,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase4-20261121/gpu_hours.csv
+Phase 5,主线,0,0,0,18.891153573989868,正式、补充和验收三项 CPU 作业墙钟之和,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase5-20261121/evidence/run_receipt.json
+Phase 6,主线,0,0,0,0.8120366828516126,评分和独立统计复算；文档整理与 SSH 等待另计,/data/user/swu073/iota6910l/project/runtime/runs/v2-phase6-20261121/evidence/statistics_verified.json

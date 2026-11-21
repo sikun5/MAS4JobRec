@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-11-21T08:57:35.035721+00:00",
+  "preflight": "2026-11-21T08:53:25.311933+00:00",
+  "opened_T": "2026-11-21T08:53:41.337919+00:00",
+  "counts": {
+    "all": 256,
+    "joint": 228,
+    "delivered": 250,
+    "no_joint": 28,
+    "no_delivery": 6,
+    "delivered_no_approval": 22
+  },
+  "statistics": {
+    "users": 256,
+    "methods": 10,
+    "absolute_intervals": 50,
+    "paired_intervals": 11,
+    "permutations_per_test": 10000,
+    "holm_family": 4,
+    "changed_orders": {
+      "T1-T0": {
+        "whole": 1,
+        "top5": 0
+      },
+      "F-T1": {
+        "whole": 0,
+        "top5": 0
+      }
+    },
+    "fallback": {
+      "B1": 0,
+      "B4": 0,
+      "T0": 0,
+      "T1": 0,
+      "W1": 0,
+      "F": 0,
+      "B4-minus-skill": 0,
+      "B4-minus-trajectory": 0,
+      "B4-minus-preference": 0,
+      "B4-minus-employer": 0
+    },
+    "cpu_wall_s": 0.2554111951030791
+  },
+  "label_reads_by_scorer": 1,
+  "phase5_manifest_files": 37,
+  "role_rows": 4,
+  "correlation_rows": 6,
+  "phase6_gpu_h": 0,
+  "matrix_sha256": "f159bd4d7ef4a32a597df6011900de7ea4dce5d76ff49b1d2b79cf94baf055cd",
+  "snapshot_sha256": "3fabb6e6cc40ac9a308257f8f8fbde272ca33d9041d37a2ebcf147e54d757962",
+  "snapshot_rebased_links": true,
+  "independent_checks": [
+    "50 method intervals, 11 difference intervals",
+    "four raw permutation p-values and Holm family",
+    "cost ledger reconciliation",
+    "calibration points, intervals, weights, role-removal differences",
+    "both result matrices resolve to identical content and working links"
+  ],
+  "optional": "未运行（本次执行至 Phase 6）"
+}

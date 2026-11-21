@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-21T08:53:25.311933+00:00",
+  "seed": 20261121,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "numpy": "2.2.6",
+  "rankings": 2560,
+  "users": 256,
+  "T_label_opens": 0,
+  "synthetic_employer": 0.6309297535714575,
+  "sample_joint_hits": 0,
+  "sample_employer_positive_rank": 2,
+  "checks": [
+    "零投递",
+    "无认可",
+    "理想排序",
+    "空分母",
+    "十种方法名单、排列与前五"
+  ],
+  "F_orders_sha256": "18ffc6f0e74518c5add9cda09cc9af135df273fd6d8256a87f9dfb56d5007d9f",
+  "expected_test_label_sha256": "a085779365599d03a47e2718c4e141450b4ca63ce04475e08240b58855db9a26",
+  "hashes": {
+    "runtime/runs/v2-phase6-20261121/code/score.py": "7e23300a82ae9a3dbacb9bb88d3505b90c055da5bdead64554ed217dc91e8174",
+    "runtime/runs/v2-phase6-20261121/evidence/experimental_setting.md": "c1d32ebd379dbcb25f85a221b986fc82ad1006e9c1cfe11f4e647015992f791b",
+    "runtime/runs/v2-phase6-20261121/evidence/phase6_evaluation.md": "21ee8e6ae8d7227e933d729fb901d9300155b4f49dcac406d9904a249f350754",
+    "runtime/runs/v2-phase6-20261121/evidence/acceptance_result_matrix.md": "10443fb9a17d493a17c5456c3c1bbffbcd2a373e50199b6228ae1bd3b3ebb3b4",
+    "runtime/runs/v2-phase2-20261121/data/splits.json": "0cab3b846ca7a051c5c7a4d4a3ba744ae9589811222e68afb74f6b14052243df",
+    "runtime/runs/v2-phase2-20261121/data/lists.jsonl": "91d481e816bb3a0fe903761880837c72b9644600f3abbcf9a1788432596512e8",
+    "runtime/runs/v2-phase5-20261121/phase5.sha256": "b3eff9e1e383f5939a55baa66b6c3b534e6b7b00b8f851702d26c347b5f1ec2a",
+    "runtime/runs/v2-phase2-20261121/phase2.sha256": "57e2edc6134271c0f1a65624cadfec95fdf53c51bf50a280c1778410225be280",
+    "runtime/runs/v2-phase4-20261121/base/reviews.jsonl": "57627a025b93e9652d9831edb1a471a032bd47eb2e789ef505dd8ef40178d883",
+    "runtime/runs/v2-phase5-20261121/base/rankings.jsonl": "340ef9c0d7b3ad484b170a80a4826cb7dd871522292fc6dec2bfeec3a80b166f",
+    "runtime/runs/v2-phase5-20261121/base/candidate_lists.jsonl": "b12c4b6f91401f0d68e0352c6415cae8ffc18a563f2d926b38514f1549b5e85f",
+    "runtime/runs/v2-phase5-20261121/base/calibration.json": "97f0fccb0093be626528963f3bbc064627905b6f2e4150bf0ccf908a6225e813"
+  }
+}

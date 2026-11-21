@@ -1,0 +1,31 @@
+{
+  "users": 256,
+  "methods": 10,
+  "absolute_intervals": 50,
+  "paired_intervals": 11,
+  "permutations_per_test": 10000,
+  "holm_family": 4,
+  "changed_orders": {
+    "T1-T0": {
+      "whole": 1,
+      "top5": 0
+    },
+    "F-T1": {
+      "whole": 0,
+      "top5": 0
+    }
+  },
+  "fallback": {
+    "B1": 0,
+    "B4": 0,
+    "T0": 0,
+    "T1": 0,
+    "W1": 0,
+    "F": 0,
+    "B4-minus-skill": 0,
+    "B4-minus-trajectory": 0,
+    "B4-minus-preference": 0,
+    "B4-minus-employer": 0
+  },
+  "cpu_wall_s": 0.2554111951030791
+}

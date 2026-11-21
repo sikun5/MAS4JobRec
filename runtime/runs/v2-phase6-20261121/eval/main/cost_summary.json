@@ -1,0 +1,16 @@
+{
+  "main_gpu_hours": 3.393183044989904,
+  "estimate_gpu_hours": 5.01879,
+  "estimate_low": 4.31118,
+  "estimate_high": 6.43442,
+  "delta_actual_minus_estimate": -1.6256069550100962,
+  "percent_delta": -32.390415917185145,
+  "phase4_other": 0.07647029387247217,
+  "pilot": 0.2197957,
+  "prep_estimate": 1.190865,
+  "measured_total": 3.612978744989904,
+  "including_preparation_estimate": 4.803843744989904,
+  "phase5_cpu_s": 18.891153573989868,
+  "phase6_score_s": 0.5566254877485335,
+  "phase6_verify_s": 0.2554111951030791
+}
