@@ -1,0 +1,2 @@
+name, uuid, driver_version, memory.total [MiB], memory.free [MiB], utilization.gpu [%]
+NVIDIA H100 80GB HBM3, GPU-e0a84529-bb4c-5783-0092-40af359c87a4, 610.43.02, 81559 MiB, 81072 MiB, 0 %
