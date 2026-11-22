@@ -17,6 +17,7 @@ def save(path, record):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--wait", action="store_true", help="wait and return the named job's exit code")
     parser.add_argument("run", type=Path)
     parser.add_argument("stage")
     parser.add_argument("revision")
@@ -32,6 +33,12 @@ def main():
         started = time.time()
         record = dict(pid=os.getpid(), started_epoch=started, revision=args.revision,
                       command=args.command, state="running")
+        if state.exists():
+            previous = json.loads(state.read_text())
+            if previous["state"] == "failed" and "ended_epoch" in previous:
+                # GPU ledgers include completed attempts when the stage is resumed.
+                prior = folder / f"previous-{previous['pid']}-{previous['started_epoch']}.json"
+                save(prior, previous)
         save(state, record)
         rc = 1
         try:
@@ -45,6 +52,12 @@ def main():
         try:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
+            if args.wait:
+                fcntl.flock(lock, fcntl.LOCK_SH)
+                previous = json.loads(state.read_text())
+                if (previous["revision"], previous["command"]) != (args.revision, args.command):
+                    parser.error("concurrent stage used a different command or revision")
+                return previous["exit_code"]
             print("already running", folder)
             return 0
         if state.exists():
@@ -59,7 +72,9 @@ def main():
             proc = subprocess.Popen([sys.executable, __file__, *sys.argv[1:]],
                                     stdin=subprocess.DEVNULL, stdout=log, stderr=log,
                                     pass_fds=(lock.fileno(),), env=env, start_new_session=True)
-        print("launched", proc.pid, folder)
+        print("launched", proc.pid, folder, flush=True)
+        if args.wait:
+            return proc.wait()
     return 0
 
 

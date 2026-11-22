@@ -1,12 +1,12 @@
 """Time CPU-only aggregation and evaluation work without reading formal C/T labels."""
 import json
 import time
-from pathlib import Path
+from experiment_paths import phase
 import numpy as np
 from scipy.optimize import minimize
 from scipy.special import softmax, logsumexp
 
-folder=Path("runtime/runs/v2-phase3-20261121/pilot")
+folder=phase(3) / "pilot"
 rng=np.random.default_rng(20261121)
 
 

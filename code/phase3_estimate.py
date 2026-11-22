@@ -1,10 +1,10 @@
 """Derive per-route hours from the retained H100 observations (no test labels)."""
 import csv
 import json
-from pathlib import Path
+from experiment_paths import phase
 from statistics import mean,median
 
-OUT=Path("runtime/runs/v2-phase3-20261121/pilot")
+OUT=phase(3) / "pilot"
 ROLES=["skill","trajectory","preference","employer"]
 
 

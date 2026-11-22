@@ -1,7 +1,7 @@
 """Load the official AWQ GEMM checkpoint using AutoAWQ 0.2.9's Triton kernels."""
 import importlib.util
 import json
-from pathlib import Path
+from experiment_paths import phase
 
 import torch
 from torch import nn
@@ -9,7 +9,7 @@ from accelerate import init_empty_weights
 from safetensors.torch import load_file
 from transformers import AutoConfig, AutoModelForCausalLM, GenerationConfig
 
-KERNEL = Path("runtime/runs/v2-phase3-20261121/pilot/vendor/autoawq-0.2.9/awq/modules/triton/gemm.py")
+KERNEL = phase(3) / "pilot/vendor/autoawq-0.2.9/awq/modules/triton/gemm.py"
 spec = importlib.util.spec_from_file_location("phase3_upstream_awq_gemm", KERNEL)
 kernels = importlib.util.module_from_spec(spec)
 import sys

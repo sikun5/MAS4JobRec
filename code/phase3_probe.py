@@ -4,16 +4,16 @@ import hashlib
 import json
 import os
 import time
-from pathlib import Path
+from experiment_paths import ROOT, phase
 
 import torch
 from safetensors.torch import load_file
 from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 
-PILOT = Path("runtime/runs/v2-phase3-20261121/pilot")
-SOURCE = Path("runtime/runs/v2-phase2-20261121/data")
-BASE = Path("model/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218")
-TEACHER = Path("model/Qwen3-32B-AWQ/0499c3ac83fdef8810b907a23894ba91e95eddd8")
+PILOT = phase(3) / "pilot"
+SOURCE = phase(2) / "data"
+BASE = (ROOT / "model/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218")
+TEACHER = (ROOT / "model/Qwen3-32B-AWQ/0499c3ac83fdef8810b907a23894ba91e95eddd8")
 ROLES = {"skill":"技能证据", "trajectory":"职业经历及岗位跨度", "preference":"求职意向", "employer":"招聘要求", "general":"综合考虑技能、经历、意向与招聘要求"}
 
 

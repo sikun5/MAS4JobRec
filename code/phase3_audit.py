@@ -3,10 +3,10 @@ import csv
 import json
 import math
 from collections import Counter
-from pathlib import Path
+from experiment_paths import phase
 
-D=Path("runtime/runs/v2-phase3-20261121/pilot")
-S=Path("runtime/runs/v2-phase2-20261121")
+D=phase(3) / "pilot"
+S=phase(2)
 roles={"skill","trajectory","preference","employer"}
 def rows(name):
     return [json.loads(l) for l in (D/(name+".jsonl")).read_text().splitlines() if l]
