@@ -1,0 +1,5 @@
+stage,scope,gpu_hours,basis
+main,主线,3.393183044989904,runtime/runs/v2-phase6-20261121/eval/main/cost_summary.json
+teacher,扩展,1.0558406812614864,runtime/runs/v2-phase7-20261121/gpu_hours.csv
+LoRA,扩展,0.09040879368782044,runtime/runs/v2-phase8-20261121/jobs/train/status.json
+student_reviews,扩展,5.292877086400986,runtime/runs/v2-phase8-20261121/evidence/review_gpu_hours.csv

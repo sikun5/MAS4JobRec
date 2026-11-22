@@ -1,0 +1,48 @@
+{
+  "run": "v2-phase8-20261121",
+  "users": {
+    "C": 128,
+    "T": 256
+  },
+  "roles": 1536,
+  "windows": 12288,
+  "requests": 12288,
+  "attempt_states": {
+    "done": 12288
+  },
+  "blocks": {
+    "C_four": {
+      "roles": 512,
+      "first": 4096,
+      "retries": 0,
+      "valid_windows": 4096,
+      "skipped": 0,
+      "valid_roles": 512,
+      "planned": 4096
+    },
+    "T_four": {
+      "roles": 1024,
+      "first": 8192,
+      "retries": 0,
+      "valid_windows": 8192,
+      "skipped": 0,
+      "valid_roles": 1024,
+      "planned": 8192
+    }
+  },
+  "input_tokens": [
+    810,
+    2874
+  ],
+  "output_tokens": [
+    36,
+    78
+  ],
+  "batch_generation_gpu_hours": {
+    "C_four": 1.760244121884979,
+    "T_four": 3.47407517987989
+  },
+  "gpu_hours": 5.292877086400986,
+  "resume_count": 0,
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+}

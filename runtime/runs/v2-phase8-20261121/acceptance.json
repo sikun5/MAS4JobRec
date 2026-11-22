@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "training": {
+    "steps": 505,
+    "coverage": {
+      "preference": 127,
+      "employer": 123,
+      "skill": 124,
+      "trajectory": 131
+    },
+    "trainable": 43646976,
+    "gradient_min": 0.09000798314809799,
+    "max_memory": 22050889728
+  },
+  "windows": {
+    "C_four": {
+      "roles": 512,
+      "first": 4096,
+      "retries": 0,
+      "valid_windows": 4096,
+      "skipped": 0,
+      "valid_roles": 512,
+      "planned": 4096
+    },
+    "T_four": {
+      "roles": 1024,
+      "first": 8192,
+      "retries": 0,
+      "valid_windows": 8192,
+      "skipped": 0,
+      "valid_roles": 1024,
+      "planned": 8192
+    }
+  },
+  "effect": {
+    "n": 228,
+    "mean": 0.030506539984061706,
+    "lo": 0.0010528017267112,
+    "hi": 0.05957279326087936,
+    "reason": ""
+  },
+  "cost": {
+    "teacher": 1.0558406812614864,
+    "train": 0.09040879368782044,
+    "reviews": 5.292877086400986,
+    "added_gpu_hours": 6.439126561350292,
+    "main_gpu_hours": 3.393183044989904,
+    "cumulative_main_plus_distill": 9.832309606340196,
+    "pilot_and_preparation_excluded": true
+  },
+  "metrics": {
+    "joint_ndcg": {
+      "n": 228,
+      "mean": 0.4366381425893421,
+      "lo": 0.39943150825725016,
+      "hi": 0.47317648512922045,
+      "reason": ""
+    },
+    "joint_recall": {
+      "n": 228,
+      "mean": 0.5458472570314675,
+      "lo": 0.5018042502088556,
+      "hi": 0.5889385790866054,
+      "reason": ""
+    },
+    "delivery_ndcg": {
+      "n": 250,
+      "mean": 0.5866543865347801,
+      "lo": 0.5558336375173042,
+      "hi": 0.617941498230158,
+      "reason": ""
+    },
+    "employer_ndcg": {
+      "n": 228,
+      "mean": 0.7526721245976024,
+      "lo": 0.7170442715224247,
+      "hi": 0.7878160754117784,
+      "reason": ""
+    },
+    "joint_hits": {
+      "n": 256,
+      "mean": 1.27734375,
+      "lo": 1.14833984375,
+      "hi": 1.4140625,
+      "reason": ""
+    }
+  },
+  "fallback": {},
+  "matrix_sha256": "19fb75b7de0ab25c95c4c18a8b1a09c1009062cc1149ad33879ad1beae838c78"
+}

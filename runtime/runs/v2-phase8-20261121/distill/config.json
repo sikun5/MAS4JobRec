@@ -1,0 +1,22 @@
+{
+  "base": "/data/user/swu073/iota6910l/project/model/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218",
+  "demos_sha256": "8d78e98ec8b995a24046e503dbea8750e51fef870bbd455d832b0afcb2b00334",
+  "role_conditioned": true,
+  "r": 16,
+  "alpha": 32,
+  "dropout": 0.0,
+  "target_modules": "all-linear",
+  "trainable": 43646976,
+  "lr": 0.0001,
+  "optimizer": "AdamW",
+  "microbatch": 1,
+  "accumulation": 1,
+  "epochs": 1,
+  "steps": 505,
+  "seed": 20261121,
+  "precision": "bf16 base, fp32 adapters",
+  "torch": "2.14.0+cu130",
+  "transformers": "4.57.6",
+  "peft": "0.13.2",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+}

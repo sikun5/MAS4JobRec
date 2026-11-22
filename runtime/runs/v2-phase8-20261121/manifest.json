@@ -1,0 +1,73 @@
+{
+  "adapter": {
+    "README.md": "444b956620997814bf9a875608ebb27bea1217c421653b4eb236b8adb00f444d",
+    "adapter_model.safetensors": "f4bc07e3a981a30d23312189ab6e61eb297c0051e6efce6e7c15f10fb9601986",
+    "adapter_config.json": "09d0eff8007537725ebfabea6bf0aed74906e2df04da35f7629e00baad044783"
+  },
+  "model": "model/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218",
+  "device": "NVIDIA H100 80GB HBM3",
+  "torch": "2.14.0+cu130",
+  "transformers": "4.57.6",
+  "cuda": "13.0",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "seed": 20261121,
+  "do_sample": false,
+  "enable_thinking": false,
+  "batch_size": 2,
+  "input_cap": 3840,
+  "output_cap": 256,
+  "profile_cap": 512,
+  "job_cap": 640,
+  "starts": [
+    7,
+    5,
+    3,
+    1,
+    7,
+    5,
+    3,
+    1
+  ],
+  "input_hashes": {
+    "inputs.jsonl": "d57df513b5bb752ef15f5f5bf14349e6e1e90a18116b1e84e7d0fffae348d064",
+    "lists.jsonl": "91d481e816bb3a0fe903761880837c72b9644600f3abbcf9a1788432596512e8",
+    "splits.json": "0cab3b846ca7a051c5c7a4d4a3ba744ae9589811222e68afb74f6b14052243df"
+  },
+  "model_manifest_sha256": "e47b9aca03bbdb25886318a0f1bea76e13303f2971c21ecb8e0ffe69029172bb",
+  "source_sha256": {
+    "phase3_probe.py": "313e91be3148a002745a2154ce454e00a420d60c29947cc009fa1733d9954d8c",
+    "phase4_agent_reviews.py": "468513554b900c74a33828ab9791af9e450f92bb3b99cfa39615b08da7333a41",
+    "phase2_data_prep.py": "f7e8164218bbc9b1343a95dfff508aedfdedfd41d19185b479191507a46b2008"
+  },
+  "model_inputs": {
+    "profile": [
+      "cur_industry_id",
+      "cur_jd_type",
+      "cur_salary_id",
+      "cur_degree_id",
+      "start_work_date",
+      "experience",
+      "live_city_id",
+      "desire_jd_city_id",
+      "desire_jd_industry_id",
+      "desire_jd_type_id",
+      "desire_jd_salary_id"
+    ],
+    "job": [
+      "jd_title",
+      "jd_sub_type",
+      "key",
+      "min_edu_level",
+      "job_description",
+      "city",
+      "max_salary",
+      "min_salary",
+      "min_years",
+      "max_edu_level",
+      "is_travel",
+      "resume_language_required",
+      "is_mangerial"
+    ]
+  }
+}

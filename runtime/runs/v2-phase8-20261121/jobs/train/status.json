@@ -1,0 +1,13 @@
+{
+  "pid": 163053,
+  "started_epoch": 1795262218.3512516,
+  "revision": "p8v1",
+  "command": [
+    "/data/user/swu073/iota6910l/project/runtime/envs/v2/bin/python",
+    "-u",
+    "runtime/runs/v2-phase8-20261121/code/train.py"
+  ],
+  "state": "done",
+  "exit_code": 0,
+  "ended_epoch": 1795262543.8229089
+}

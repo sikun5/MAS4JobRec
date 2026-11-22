@@ -1,0 +1,13 @@
+{
+  "pid": 218776,
+  "started_epoch": 1795281816.8709772,
+  "revision": "p8v1",
+  "command": [
+    "/data/user/swu073/iota6910l/project/runtime/envs/v2/bin/python",
+    "-u",
+    "runtime/runs/v2-phase8-20261121/code/pipeline.py"
+  ],
+  "state": "failed",
+  "exit_code": 1,
+  "ended_epoch": 1795281817.2299192
+}

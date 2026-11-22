@@ -1,0 +1,8 @@
+{
+  "label_reads": 1,
+  "opened_epoch": 1795281838.4585426,
+  "test_sha256": "a085779365599d03a47e2718c4e141450b4ca63ce04475e08240b58855db9a26",
+  "blind_epoch": 1795281823.9579577,
+  "baseline_sha256": "de369d2199ad595fcb15e7e1f5e57cd218721803bd6e459f827c438c837213ef",
+  "independent_intervals": 6
+}

@@ -1,0 +1,9 @@
+{
+  "teacher": 1.0558406812614864,
+  "train": 0.09040879368782044,
+  "reviews": 5.292877086400986,
+  "added_gpu_hours": 6.439126561350292,
+  "main_gpu_hours": 3.393183044989904,
+  "cumulative_main_plus_distill": 9.832309606340196,
+  "pilot_and_preparation_excluded": true
+}

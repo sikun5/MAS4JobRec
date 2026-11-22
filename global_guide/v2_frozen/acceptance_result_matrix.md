@@ -9,7 +9,7 @@
 | RQ1 增加专业评审 | B4 对 B1；每人 32 窗对 8 窗 | 同一测试名单与原版 8B | 估计角色与调用共同增量。联合 nDCG@5 差 +0.00222 [-0.01181, +0.01629]，区间跨零。[逐人差值](../../runtime/runs/v2-phase6-20261121/eval/main/paired_deltas.csv) |
 | RQ2 共同错误降权 | T1 对 T0；T1 对 W1 为聚合器对照 | C 分析误差；T 检验排名 | 校准集显示六对正相关；降权后测试前五顺序改变 0 人。[六对相关与区间](../../runtime/runs/v2-phase5-20261121/analysis/correlated_error_pairs.csv) · [逐人差值](../../runtime/runs/v2-phase6-20261121/eval/main/paired_deltas.csv) |
 | RQ3 双边效用 | F 对 T1；F 对 B4 | T 的联合、投递及已投递认可子榜 | F 与 T1 的全部十岗顺序一致，双边指标增量均为零。[逐人差值](../../runtime/runs/v2-phase6-20261121/eval/main/paired_deltas.csv) |
-| Optional 逐角色蒸馏 | 32B 教师与 8B LoRA 学生 | 独立训练用户预留 256，正式使用 0 | 未运行（本次执行至 Phase 6）；F-SFT 及配对效应均为 NA。 |
+| Optional 逐角色蒸馏 | 32B 教师示范；8B 共享 LoRA | 256 人预留，214 人可选窗；505 条保留示范覆盖 124 人 | 已完成。F-SFT−F 联合 nDCG@5 差 +0.03051 [+0.00105, +0.05957]。[配对差值](../../runtime/runs/v2-phase8-20261121/eval/student/paired_deltas.csv) |
 
 ## 2. 运行登记与协议验收
 
@@ -33,7 +33,7 @@
 | 校准与配对对照 | C 内三折 43/43/42。T0/T1/W1/F 共用选票，T1/W1 有效角色和权重一致；pE 仅在已投递样本上校准。估参阶段读取 T 标签 0 次 | [可信排序验收](../../runtime/runs/v2-phase5-20261121/phase5_acceptance.md) |
 | 回退与评分 | 每方法 256 份完整排名，全部计入分母核对。各方法实际回退 0。开封前合成样例雇主 nDCG 为 0.63093 | [回退清单](../../runtime/runs/v2-phase5-20261121/base/fallbacks.csv) · [评分回执](../../runtime/runs/v2-phase6-20261121/evidence/score_receipt.json) |
 | 硬件与复现 | H100 单卡评审，Phase 5、6 使用 CPU。固定统计种子 20261121 | [探测验收](../../runtime/runs/v2-phase3-20261121/phase3_acceptance.md) · [独立复算](../../runtime/runs/v2-phase6-20261121/evidence/statistics_verified.json) |
-| Optional 蒸馏 | 未运行（本次执行至 Phase 6） | 正式教师示范、学生训练和重评均未启动 |
+| Optional 蒸馏 | 完成 505 步、学生 C/T 同榜盲评、独立校准及配对评分 | [Phase 8 验收](../../runtime/runs/v2-phase8-20261121/phase8_acceptance.md) |
 
 ## 3. 排序结果与配对比较
 
@@ -62,7 +62,7 @@
 | B4-minus-trajectory | 0.40919 [0.37334, 0.44607] | 0.52613 [0.48139, 0.57113] | 0.57206 [0.53941, 0.60600] | 0.75290 [0.71834, 0.78690] | 1.26172 [1.12490, 1.41016] | [逐人指标](../../runtime/runs/v2-phase6-20261121/eval/main/per_user.csv) |
 | B4-minus-preference | 0.40807 [0.37245, 0.44447] | 0.52602 [0.48036, 0.57147] | 0.56743 [0.53440, 0.60151] | 0.75438 [0.71980, 0.78994] | 1.25781 [1.11719, 1.40234] | [逐人指标](../../runtime/runs/v2-phase6-20261121/eval/main/per_user.csv) |
 | B4-minus-employer | 0.40427 [0.36802, 0.44003] | 0.52262 [0.47715, 0.56817] | 0.56809 [0.53492, 0.60197] | 0.75062 [0.71513, 0.78566] | 1.25391 [1.11328, 1.39844] | [逐人指标](../../runtime/runs/v2-phase6-20261121/eval/main/per_user.csv) |
-| Optional F-SFT | NA | NA | NA | NA | NA | 未运行 |
+| Optional F-SFT | 0.43664 [0.39943, 0.47318] | 0.54585 [0.50180, 0.58894] | 0.58665 [0.55583, 0.61794] | 0.75267 [0.71704, 0.78782] | 1.27734 [1.14834, 1.41406] | [学生逐人指标](../../runtime/runs/v2-phase8-20261121/eval/student/per_user.csv) |
 
 ### 四个预登记比较
 
@@ -86,7 +86,7 @@
 | B4-minus-employer−B4 | 联合 nDCG@5 | 228 | -0.00554 [-0.01294, +0.00151] | [逐人差值](../../runtime/runs/v2-phase6-20261121/eval/main/paired_deltas.csv) |
 | F−T1 | 投递 nDCG@5 | 250 | +0.00000 [+0.00000, +0.00000] | [逐人差值](../../runtime/runs/v2-phase6-20261121/eval/main/paired_deltas.csv) |
 | F−T1 | 已投递认可 nDCG@5 | 228 | +0.00000 [+0.00000, +0.00000] | [逐人差值](../../runtime/runs/v2-phase6-20261121/eval/main/paired_deltas.csv) |
-| Optional F-SFT−F | 联合 nDCG@5 | NA | NA | 未运行 |
+| Optional F-SFT−F | 联合 nDCG@5 | 228 | +0.03051 [+0.00105, +0.05957] | [配对差值](../../runtime/runs/v2-phase8-20261121/eval/student/paired_deltas.csv) |
 
 ## 4. 角色贡献与跨 Agent 相关错误
 
@@ -145,4 +145,13 @@ Skill 与 Trajectory 的等权相关最高（0.794）。Preference 权重降幅�
 
 评审首轮失败、重试后持久失败、缺失角色均为 0。六种主方法与四个角色移除对照逐方法回退均为 0，F 沿用 BM25 与缺双边头退回 T1 分别为 0。[评审统计](../../runtime/runs/v2-phase4-20261121/acceptance.json) · [逐方法复核](../../runtime/runs/v2-phase6-20261121/evidence/statistics_verified.json)
 
-**Optional 蒸馏状态：未运行（本次执行至 Phase 6）。** 正式教师生成、学生 LoRA 训练和重评的新增 GPU 小时均为 0。四个教师角色尝试及保留示范均为 0；保留率、学生效果和学生回退为 NA。Phase 3 的教师探测样本计入 pilot。
+**Optional 蒸馏已完成。** 32B 教师 1.05584、LoRA 训练 0.09041、学生重评 5.29288 单卡小时。扩展新增 6.43913，主线加扩展累计 9.83231 GPU 小时。主线复用一次，pilot 与准备时段单列。[工时账本](../../runtime/runs/v2-phase8-20261121/gpu_hours.csv)
+
+| 教师角色 | 尝试 | 格式有效 | 保留 | 保留率 |
+|---|---:|---:|---:|---:|
+| skill | 428 | 428 | 124 | 28.97% |
+| trajectory | 428 | 428 | 131 | 30.61% |
+| preference | 428 | 428 | 127 | 29.67% |
+| employer | 428 | 428 | 123 | 28.74% |
+
+学生计划 12,288 窗，实际调用 12,288 次，重试 0 次，跳过 0 窗。F-SFT 回退 0 人，原因计数 {}。五项指标与原版使用相同用户，人数依次为 228、228、250、228、256。教师示范与学生微调的效果按同榜配对区间解释。[学生逐人指标](../../runtime/runs/v2-phase8-20261121/eval/student/per_user.csv) · [分角色示范统计](../../runtime/runs/v2-phase7-20261121/distill/role_results.csv)

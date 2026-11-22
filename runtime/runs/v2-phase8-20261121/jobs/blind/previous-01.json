@@ -1,0 +1,13 @@
+{
+  "pid": 218513,
+  "started_epoch": 1795281734.9822574,
+  "revision": "p8v1",
+  "command": [
+    "/data/user/swu073/iota6910l/project/runtime/envs/v2/bin/python",
+    "-u",
+    "/data/user/swu073/iota6910l/project/runtime/runs/v2-phase8-20261121/code/blind.py"
+  ],
+  "state": "failed",
+  "exit_code": 1,
+  "ended_epoch": 1795281735.1978369
+}
