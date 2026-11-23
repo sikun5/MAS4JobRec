@@ -50,7 +50,7 @@ For the four raw p-values in ascending order, Holm adjustment gives $p^\mathrm{a
 
 ## Ranking results on T
 
-Cells are user means **[95% percentile interval]**. Higher values are favorable for all five metrics. B1 is the generalist, B4 is the equal-weight ballot average, T0 and T1 are reliability-weighted PL before and after the correlation penalty, W1 uses T1 weights with mean rank points, and F adds bilateral utility to T1. Each B4-minus row averages the three remaining ballots. F-SFT uses the student and its own C parameters. [Method equations](method_pipeline.md#aggregating-the-ballots)
+Cells are user means **[95% percentile interval]**. Higher values are favorable for all five metrics. B1 is the generalist, B4 is the equal-weight ballot average, T0 and T1 are reliability-weighted PL before and after the correlation penalty, W1 uses T1 weights with mean rank points, and F adds bilateral utility to T1. Each B4-minus row averages the three remaining ballots. F-SFT uses the student and its own C parameters. B4-SFT averages the same student’s test ballots with equal weights. [Phase 9 estimates](../runtime/runs/v2-phase9-20261123/summary.json) [Method equations](method_pipeline.md#aggregating-the-ballots)
 
 **Joint outcomes.** The first two columns score the 228 users with a joint success. The last column counts how many approved applications a top-five recommendation recovers per person across the whole test population.
 
@@ -67,6 +67,7 @@ Cells are user means **[95% percentile interval]**. Higher values are favorable 
 | B4-minus-preference | 0.40807 [0.37245, 0.44447] | 0.52602 [0.48036, 0.57147] | 1.25781 [1.11719, 1.40234] |
 | B4-minus-employer | 0.40427 [0.36802, 0.44003] | 0.52262 [0.47715, 0.56817] | 1.25391 [1.11328, 1.39844] |
 | F-SFT | 0.43664 [0.39943, 0.47318] | 0.54585 [0.50180, 0.58894] | 1.27734 [1.14834, 1.41406] |
+| B4-SFT | 0.43693 [0.39915, 0.47402] | 0.54036 [0.49617, 0.58467] | 1.26953 [1.13672, 1.40625] |
 
 **Outcomes on each side.** Application ranking uses all ten jobs. Approval ranking uses the applied-job subsequence, whose length varies by person. Its score describes a different candidate pool and is therefore meaningful for comparisons down its own column. [Base means and intervals](../runtime/runs/v2-phase6-20261121/eval/main/summary.json) · [Student means and intervals](../runtime/runs/v2-phase8-20261121/eval/student/summary.json)
 
@@ -83,6 +84,7 @@ Cells are user means **[95% percentile interval]**. Higher values are favorable 
 | B4-minus-preference | 0.56743 [0.53440, 0.60151] | 0.75438 [0.71980, 0.78994] |
 | B4-minus-employer | 0.56809 [0.53492, 0.60197] | 0.75062 [0.71513, 0.78566] |
 | F-SFT | 0.58665 [0.55583, 0.61794] | 0.75267 [0.71704, 0.78782] |
+| B4-SFT | 0.59127 [0.55871, 0.62227] | 0.75187 [0.71665, 0.78721] |
 
 ## Paired comparisons
 
@@ -95,7 +97,7 @@ Cells are user means **[95% percentile interval]**. Higher values are favorable 
 | F − T1 | 228 | +0.00000 [+0.00000, +0.00000] | 1.00000 | 1.00000 |
 | F − B4 | 228 | −0.00368 [−0.01084, +0.00304] | 0.30667 | 1.00000 |
 
-**Explanatory comparisons.** The same-weight T1−W1 comparison asks whether PL improves on averaging rank points. Its interval crosses zero. Dropping Employer yields the largest estimated loss among the four role removals, though each interval also crosses zero. The student comparison uses the frozen original F as its paired reference. [Base contrasts](../runtime/runs/v2-phase6-20261121/eval/main/comparisons.csv) · [Student contrast](../runtime/runs/v2-phase8-20261121/eval/student/summary.json)
+**Explanatory comparisons.** The same-weight T1−W1 comparison asks whether PL improves on averaging rank points. Its interval crosses zero. Dropping Employer yields the largest estimated loss among the four role removals, though each interval also crosses zero. The frozen student comparison uses F as its reference. The post hoc equal-weight comparison uses B4. [Base contrasts](../runtime/runs/v2-phase6-20261121/eval/main/comparisons.csv) · [Student contrast](../runtime/runs/v2-phase8-20261121/eval/student/summary.json)
 
 | Contrast | Metric | Users | Paired change [95% interval] |
 |---|---|---:|---:|
@@ -107,6 +109,7 @@ Cells are user means **[95% percentile interval]**. Higher values are favorable 
 | F − T1 | Application nDCG@5 | 250 | +0.00000 [+0.00000, +0.00000] |
 | F − T1 | Conditional approval nDCG@5 | 228 | +0.00000 [+0.00000, +0.00000] |
 | F-SFT − F | Joint nDCG@5 | 228 | +0.03051 [+0.00105, +0.05957] |
+| B4-SFT − B4 (post hoc) | Joint nDCG@5 | 228 | +0.02712 [−0.00386, +0.05612] |
 
 ## Correlated errors and reviewer weights
 
@@ -176,4 +179,8 @@ All four calibrated student reviewers have lower error than their base counterpa
 
 **Same-list test outcome.** F-SFT raised joint nDCG@5 from **0.40613 to 0.43664**. The paired change was **+0.03051 [+0.00105, +0.05957]** across 228 users, about a 7.5% relative increase in the mean. The interval's lower endpoint is close to zero. Joint recall rose from 0.53208 to 0.54585. The top-five hit count across all 256 users rose from **323 to 327**. Counts give each hit equal credit, while joint nDCG rewards earlier positions and normalizes within seeker. [Base evaluation](../runtime/runs/v2-phase6-20261121/eval/main/summary.json) · [Student evaluation](../runtime/runs/v2-phase8-20261121/eval/student/summary.json)
 
-Application nDCG rose by **+0.01787** and conditional approval nDCG changed by **−0.00161**. These are descriptive differences between the reported means. The sole frozen RQ4 paired contrast is joint nDCG for F-SFT−F. It evaluates teacher supervision followed by student-specific recalibration of the same procedure. The relative performance of simple and complex aggregation on identical student ballots remains unmeasured. [Student evaluation protocol](../global_guide/v2_frozen/phase8_student_evaluation.md)
+Application nDCG rose by **+0.01787** and conditional approval nDCG changed by **−0.00161**. These are descriptive differences between the reported means. The sole frozen RQ4 paired contrast is joint nDCG for F-SFT−F. It evaluates teacher supervision followed by student-specific recalibration of the same procedure. [Student evaluation protocol](../global_guide/v2_frozen/phase8_student_evaluation.md)
+
+**Post hoc B4-SFT ablation.** Holding equal-weight aggregation fixed, the paired joint nDCG@5 change was **+0.02712 [−0.00386, +0.05612]** across 228 seekers. The point estimate favors the student, and the interval includes zero. Joint nDCG improved for 93 seekers, stayed the same for 64, and declined for 71. Among all 256 seekers, 256 had a different ten-job order, 250 had a different ordered top five, and 212 had a change in which jobs appeared in the top five. [Phase 9 estimates](../runtime/runs/v2-phase9-20261123/summary.json) · [Phase 9 acceptance](../runtime/runs/v2-phase9-20261123/phase9_acceptance.md)
+
+Application nDCG increased from 0.57113 to 0.59127 across 250 seekers. Within applied jobs, approval nDCG decreased from 0.75614 to 0.75187 across 228. These are descriptive differences in means. The two distillation intervals estimate changes from different base rankings. Determining whether one aggregation rule benefits more from distillation would require a paired test of the difference between those changes. [Per-user metrics (server only)](../runtime/runs/v2-phase9-20261123/per_user.csv) · [Paired joint nDCG differences (server only)](../runtime/runs/v2-phase9-20261123/paired_deltas.csv)

@@ -1,0 +1,49 @@
+{
+  "head": "a09f11b8ba0cd672b5d5286c70a5b359b134fbfe",
+  "seed": 20261121,
+  "inputs": {
+    "runtime/runs/v2-phase2-20261121/data/splits.json": "0cab3b846ca7a051c5c7a4d4a3ba744ae9589811222e68afb74f6b14052243df",
+    "runtime/runs/v2-phase2-20261121/data/lists.jsonl": "91d481e816bb3a0fe903761880837c72b9644600f3abbcf9a1788432596512e8",
+    "runtime/runs/v2-phase2-20261121/labels/T.jsonl": "a085779365599d03a47e2718c4e141450b4ca63ce04475e08240b58855db9a26",
+    "runtime/runs/v2-phase4-20261121/base/reviews.jsonl": "57627a025b93e9652d9831edb1a471a032bd47eb2e789ef505dd8ef40178d883",
+    "runtime/runs/v2-phase5-20261121/base/rankings.jsonl": "340ef9c0d7b3ad484b170a80a4826cb7dd871522292fc6dec2bfeec3a80b166f",
+    "runtime/runs/v2-phase6-20261121/eval/main/per_user.csv": "f1c1ebb794b404ed1ffcca2555e45ae2fa48e4c99483423b656e2b357f6bba92",
+    "runtime/runs/v2-phase7-20261121/distill/demos.jsonl": "8d78e98ec8b995a24046e503dbea8750e51fef870bbd455d832b0afcb2b00334",
+    "runtime/runs/v2-phase7-20261121/gpu_hours.csv": "139fecef362c938652ec22b6cb259521da8109459688e62552a372062a5ab5be",
+    "runtime/runs/v2-phase7-20261121/distill/teacher_manifest.json": "4fe78a1bb425b89f1910d69c53e5a3fd485e10f88b8593b13660e788ca797486",
+    "runtime/runs/v2-phase8-20261121/distill/config.json": "581da24f8f38593eada0f36fedd16453820a9fe41bfeacca2a2a4ea1bacf3880",
+    "runtime/runs/v2-phase8-20261121/manifest.json": "00fcbe1abfa829c0a419a73b963ca4396648d28b39ef9b18ec3c61f35e3e592e",
+    "runtime/runs/v2-phase8-20261121/evidence/blind_seal.json": "85e28d1ff84a0fa2e828c99b55687b4674d77d12372912f071b2c3212b08d45a",
+    "runtime/runs/v2-phase8-20261121/evidence/reload.json": "cd3dda49894764f5391308fd389b4031692d259e372a785f827a3a4219bf50f9",
+    "runtime/runs/v2-phase8-20261121/evidence/adapter.json": "d2590b68caacff9fc78efe30ecab27e7f50159f86a3ca209b7b60230590cea2d",
+    "runtime/runs/v2-phase8-20261121/student/reviews.jsonl": "3825bd62b0a8ccb8668fc6c742f0dd3ce441de99e87e556db9b21824c321c76d",
+    "runtime/runs/v2-phase8-20261121/gpu_hours.csv": "1ca39a3432594b2c55c77c9f09704395a29aeec742bb34fa4fc19b64b4dc65f0",
+    "runtime/runs/v2-phase8-20261121/distill/adapter/README.md": "444b956620997814bf9a875608ebb27bea1217c421653b4eb236b8adb00f444d",
+    "runtime/runs/v2-phase8-20261121/distill/adapter/adapter_model.safetensors": "f4bc07e3a981a30d23312189ab6e61eb297c0051e6efce6e7c15f10fb9601986",
+    "runtime/runs/v2-phase8-20261121/distill/adapter/adapter_config.json": "09d0eff8007537725ebfabea6bf0aed74906e2df04da35f7629e00baad044783"
+  },
+  "upstream_manifests": {
+    "runtime/runs/v2-phase2-20261121/phase2.sha256": "57e2edc6134271c0f1a65624cadfec95fdf53c51bf50a280c1778410225be280",
+    "runtime/runs/v2-phase4-20261121/phase4.sha256": "525b07f33b607258ece8973b8166106f6e1b72af631eebc00b8f3bad2699f343",
+    "runtime/runs/v2-phase5-20261121/phase5.sha256": "b3eff9e1e383f5939a55baa66b6c3b534e6b7b00b8f851702d26c347b5f1ec2a",
+    "runtime/runs/v2-phase6-20261121/phase6.sha256": "9793ec1bc94814f446503d310ea4e82eba12aef501e75883645bceb6c67baede",
+    "runtime/runs/v2-phase7-20261121/phase7.sha256": "735abe9801e3d912fee81b780fda77d6093119b7f7864cf561c69d817c5e0e65",
+    "runtime/runs/v2-phase8-20261121/phase8.sha256": "d4b20d18bbfa3f9a265d3407c2bfa8fdc229a4a06432f3a5b46d17aa683748bb"
+  },
+  "code": {
+    "runtime/runs/v2-phase9-20261123/phase9.py": "7a8fe4e2712e4a3e02edba446335003307dde62e050087d6a3a5c53ccf55d29c",
+    "runtime/runs/v2-phase9-20261123/protocol.md": "3b63d45a21cc3eb607b88f65b262862ee75781f4e131d64cfde3f54876be4f3c",
+    "runtime/runs/v2-phase9-20261123/execute.py": "4cfd0b85e8d3ce1546589c28daea552ff01f258875d8e02bd31e20b0fbab8ee6",
+    "code/phase5_ranking.py": "98eb0cc99b0571e51bbc1e79d7b5db209f9420f4c8e2b9cbb9ec06778730279f",
+    "code/phase6_score.py": "82c5645ef54020ea4a9934fa41a13567e5ff60baff1d3b9e8a53078ae1ba3888",
+    "code/experiment_paths.py": "41d4a9775504365de33f676abfc49dbaabc0684431ef326cf42a28c2abd441ae"
+  },
+  "demos": 505,
+  "adapter": {
+    "README.md": "444b956620997814bf9a875608ebb27bea1217c421653b4eb236b8adb00f444d",
+    "adapter_model.safetensors": "f4bc07e3a981a30d23312189ab6e61eb297c0051e6efce6e7c15f10fb9601986",
+    "adapter_config.json": "09d0eff8007537725ebfabea6bf0aed74906e2df04da35f7629e00baad044783"
+  },
+  "base_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "label_hash_source": "Phase 2 committed manifest; label unopened"
+}

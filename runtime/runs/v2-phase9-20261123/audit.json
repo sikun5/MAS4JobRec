@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "independent_intervals": 11,
+  "base_replayed": 256,
+  "student_rankings": 256,
+  "paired_n": 228,
+  "costs": {
+    "main": 3.393183044989904,
+    "teacher": 1.0558406812614864,
+    "LoRA": 0.09040879368782044,
+    "student_reviews": 5.292877086400986
+  },
+  "ids_verified": true
+}

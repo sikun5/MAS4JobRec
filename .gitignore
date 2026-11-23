@@ -236,3 +236,17 @@ __pycache__/
 !/runtime/runs/v2-phase8-20261121/phase8_acceptance.md
 !/runtime/runs/v2-phase8-20261121/student/calibration.json
 !/runtime/runs/v2-phase8-20261121/work_log.md
+
+# Phase 9 equal-weight distillation ablation: code and summary evidence
+!/runtime/runs/v2-phase9-20261123/
+!/runtime/runs/v2-phase9-20261123/protocol.md
+!/runtime/runs/v2-phase9-20261123/phase9.py
+!/runtime/runs/v2-phase9-20261123/execute.py
+!/runtime/runs/v2-phase9-20261123/input_lock.json
+!/runtime/runs/v2-phase9-20261123/ranking_seal.json
+!/runtime/runs/v2-phase9-20261123/summary.json
+!/runtime/runs/v2-phase9-20261123/cost.json
+!/runtime/runs/v2-phase9-20261123/audit.json
+!/runtime/runs/v2-phase9-20261123/phase9_acceptance.md
+!/runtime/runs/v2-phase9-20261123/work_log.md
+!/runtime/runs/v2-phase9-20261123/phase9.sha256

@@ -1,0 +1,21 @@
+{
+  "cpu_job_wall_seconds": 3.670718844048679,
+  "stages_seconds": {
+    "lock": 1.505326323211193,
+    "rank": 0.2114809430204332,
+    "score": 1.6962945302948356,
+    "audit": 0.25446031987667084
+  },
+  "scope": "lock start through independent audit exit; excludes SSH, transfer and report/seal",
+  "phase9_incremental_gpu_hours": 0,
+  "upstream_reference_gpu_hours": {
+    "main": 3.393183044989904,
+    "teacher": 1.0558406812614864,
+    "LoRA": 0.09040879368782044,
+    "student_reviews": 5.292877086400986
+  },
+  "sources": [
+    "../v2-phase7-20261121/gpu_hours.csv",
+    "../v2-phase8-20261121/gpu_hours.csv"
+  ]
+}

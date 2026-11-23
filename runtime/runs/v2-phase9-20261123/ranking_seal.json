@@ -1,0 +1,24 @@
+{
+  "epoch": 1795427475.0560582,
+  "baseline_exact": 256,
+  "student_rankings": 256,
+  "base_ballots": {
+    "valid": 1024
+  },
+  "student_ballots": {
+    "valid": 1024
+  },
+  "student_fallbacks": 0,
+  "changes": {
+    "full": 256,
+    "top5_order": 250,
+    "top5_set": 212
+  },
+  "synthetic": [
+    "tie by job ID",
+    "zero/one role BM25"
+  ],
+  "label_access": "OS Python audit hook denied label opens",
+  "rankings_sha256": "8b7545476738c3a5409227f514a56dde204c7b0744f12664ffacb6230b3f15c2",
+  "input_lock_sha256": "1f33441291e316f73841f69cc86dd8ce93b25e5d938fea0de6f8df8b5659ee5f"
+}

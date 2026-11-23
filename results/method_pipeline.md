@@ -17,6 +17,10 @@ flowchart TD
     sc --> fs["Apply PL and bilateral scoring to student test ballots for F-SFT"]
     f --> evals["Seal each test ranking, then score on the same users and jobs"]
     fs --> evals
+    base --> b4["Average base test rank points for B4"]
+    student --> b4s["Average student test rank points for B4-SFT"]
+    b4 --> evals
+    b4s --> evals
 ```
 
 Each run produces an ordering of ten jobs and recommends the first five. Calibration set C supplies the parameters for its own model. Test set T supplies the person–job outcomes for evaluation. The base run also produces the generalist, simple aggregation and component controls used in RQ1–3. [Research questions](README.md#research-questions) · [Evaluation protocol and results](metric_result.md)
@@ -193,7 +197,9 @@ $$
 
 Shuffle all 505 examples once with seed 20261121. Train one epoch with AdamW at fixed learning rate $10^{-4}$, microbatch one and gradient accumulation one, for 505 updates. Use the final adapter and reload it into a fresh inference process. The 8B and 32B snapshot revisions are `b968826d9c46dd6066d109eabc6255188de91218` and `0499c3ac83fdef8810b907a23894ba91e95eddd8`, respectively. [Training code](../runtime/runs/v2-phase8-20261121/code/train.py) · [Reload receipt](../runtime/runs/v2-phase8-20261121/evidence/reload.json) · [Teacher manifest](../runtime/runs/v2-phase7-20261121/distill/teacher_manifest.json)
 
-**Same-list evaluation.** Rerun the four student roles on the original C and T lists with the same prompts, decoding and window order. B1 reuses the original generalist cache. The student produces different probability values and ballots, so fit its six temperatures, four reliabilities, six correlations and role weights on its own C outputs using the original folds. Apply the same PL and bilateral formulas on T. Seal all 256 F-SFT orders before the student scorer reads T labels. The sole student contrast is the paired change in joint nDCG@5 against frozen F. The evaluation unit is the seeker. [Student ranking seal](../runtime/runs/v2-phase8-20261121/evidence/blind_seal.json) · [Scoring receipt](../runtime/runs/v2-phase8-20261121/evidence/score_receipt.json) · [Metric formulas and comparisons](metric_result.md)
+**Same-list evaluation.** Rerun the four student roles on the original C and T lists with the same prompts, decoding and window order. B1 reuses the original generalist cache. The student produces different probability values and ballots, so fit its six temperatures, four reliabilities, six correlations and role weights on its own C outputs using the original folds. Apply the same PL and bilateral formulas on T. Seal all 256 F-SFT orders before the student scorer reads T labels. The frozen Phase 8 contrast is the paired change in joint nDCG@5 against frozen F. The evaluation unit is the seeker. [Student ranking seal](../runtime/runs/v2-phase8-20261121/evidence/blind_seal.json) · [Scoring receipt](../runtime/runs/v2-phase8-20261121/evidence/score_receipt.json) · [Metric formulas and comparisons](metric_result.md)
+
+**Post hoc equal-weight ablation.** Phase 9 first replayed B4 from the base test ballots and matched all 256 frozen orders. It then applied the same rule to the 1,024 valid specialist ballots already produced by the Phase 8 student on T. Each job receives the mean of $(10-r)/9$ across valid ballots, where $r$ is its one-based rank on a ballot. Ties go to the smaller job ID. With fewer than two valid ballots, the rule returns the original BM25 order. All 256 student lists had four valid ballots. The ranking process sealed B4-SFT before a separate scorer opened the test labels and paired each seeker with the original B4 result. [Ranking seal](../runtime/runs/v2-phase9-20261123/ranking_seal.json) · [Phase 9 acceptance](../runtime/runs/v2-phase9-20261123/phase9_acceptance.md)
 
 ## References
 
